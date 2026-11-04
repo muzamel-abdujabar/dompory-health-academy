@@ -1,48 +1,25 @@
-# Dompory Health Academy — expanded release
+# Dompory Health Academy — complete WhatsApp-integrated release
 
-## Included
-11 bilingual pages: home, training, research, about, services, blog, proposals, incubation, nutrition, surveys and epidemiology. Proposed offerings require confirmation of qualifications, capacity, fees, scope and timing. Incubation means initiative mentoring, not clinical/laboratory incubation, investment or guaranteed funding. Outbreak support is training/advisory only, not an emergency service.
-Contact: mzamel.health@gmail.com. No payment, backend, upload, student account or automatic mail delivery.
+## Contact
+WhatsApp: +249 128 372 543. Email: mzamel.health@gmail.com. WhatsApp contact is already included in all 11 pages (hero, footer and floating button). No add-on or manual script insertion needed. Links open a draft; the visitor must send it. Number registration and message delivery have not been verified.
 
-## 1. Preview
-Extract the ZIP. Open public/index.html. Keep all public files together.
-Design: navy #12304A, teal #007F82, gold #C49A45, off-white #F6F8FA. Gold is decorative, not small body text. English/Arabic switch with RTL; preference stored locally.
+## Preview
+Extract the ZIP and open public/index.html. Keep files together. English/Arabic, RTL, navy/teal/gold palette. No external font dependency, tracking, payment, uploads or backend. Language preference uses browser localStorage.
 
-## 2. GitHub stores your source
-Sign in to github.com. Create a repository (suggested name dompory-health-academy). Upload the extracted CONTENTS, preserving the public folder, firebase.json, README.md and .gitignore. Commit. Use Add file > Upload files for subsequent changes. Never upload private CVs, passwords, patient data or donor-confidential information. A public repository exposes its contents. Saving to GitHub does NOT automatically publish to Firebase.
-For this service-oriented academy, use Firebase for production. GitHub Pages is not intended/allowed as free hosting for running an online business or websites primarily facilitating commercial transactions. If you instead create a genuinely noncommercial educational site, review Pages policy; it can publish from main / root or /docs. This package uses /public, not /docs, and is not configured for Pages.
+## GitHub upload — important
+This is the full website, not only instructions. Upload the public FOLDER itself, plus firebase.json, README.md and .gitignore, into the repository root. Do not upload the ZIP alone. After committing, check that public/index.html exists. Back up the existing project before replacing files. Do not combine the previous whatsapp-contact.js add-on with this version; contact links are already integrated.
 
-## 3. Free Google hosting: Firebase Hosting (Spark)
-Choose Firebase Hosting, NOT Firebase App Hosting (which requires billing). Spark has no-cost quotas, not unlimited hosting. Stay on Spark if avoiding paid usage; service may be limited/stopped at quota. A custom purchased domain is optional; web.app and firebaseapp.com subdomains are provided.
-A. Create a Firebase project in the Firebase console. Select Spark; no Analytics needed. Enable Hosting if prompted.
-B. Install a currently supported Node.js LTS and the Firebase CLI on your computer.
-C. Open a terminal in the extracted folder containing firebase.json (not inside public). Run:
+## Firebase
+The supplied firebase.json publishes the public directory. Use the existing Firebase CLI workflow from this folder: firebase login, firebase use --add, then firebase deploy --only hosting. An existing Firebase project and configured CLI are required. This package does not connect accounts, create a project or publish automatically.
 
-    npm install -g firebase-tools
-    firebase login
-    firebase use --add
+## Blogger
+blogPublicUrl is blank intentionally. Supply the confirmed public HTTPS blog address in public/config.js, not a blogger.com/blog/posts owner-dashboard URL. No URL is inferred from domopry. No automatic import or sync.
 
-Select the Firebase project and assign alias default. If you prefer the standard setup wizard, run firebase init hosting instead: select the existing project, public directory = public, single-page app = No, automatic GitHub deploy = No, overwrite existing index.html = No. Keep the provided pages and configuration.
-D. Deploy:
+## Scope and integrity
+11 pages include proposals, initiative incubation, nutrition, surveys and epidemiology/outbreak preparedness. Offerings are proposed, subject to capacity/scope agreement. No guaranteed grants, accredited incubator, investment fund, clinical nutrition, diagnosis, emergency response or official certificate renewal is claimed. Research support excludes fabricated data and deceptive ghostwriting. Founder profile is based on the owner-supplied CV; PhD is ongoing. Personal roles do not imply academy endorsement or partnership. Do not send patient records or identifiable survey data over chat/email. Confirm privacy and commercial terms before real orders.
 
-    firebase deploy --only hosting
+## Verification
+Local file references and WhatsApp destinations checked across all 11 pages. No live deployment, full browser rendering test, independent credential verification or accessibility certification performed. Test mobile, keyboard access, Arabic/English, email drafts and WhatsApp on your devices before launch.
 
-Open the actual Hosting URL printed by Firebase. Future updates: edit files, optionally commit/push GitHub, then rerun deploy. GitHub changes do not deploy by themselves in this manual workflow.
-
-## 4. Blogger / domopry
-Do not infer an address from the blog display name. Open Blogger, choose your blog and use View blog; copy the visitor URL. The previously supplied blogger.com/blog/posts/... is the owner dashboard, not the visitor URL.
-Edit public/config.js and set blogPublicUrl to the confirmed HTTPS visitor address. Redeploy. The article button stays hidden until a valid public URL is configured.
-In Blogger: Layout > edit the Pages gadget > Add external link. Title: Academy website. URL: your actual Firebase site URL. Save the link and layout. If the Pages gadget is missing, add it through Layout > Add a Gadget > Pages.
-This is two-way navigation, NOT shared login, content synchronisation, migration or automatic importing. This HTML package is NOT a Blogger XML theme. Back up the Blogger theme before unrelated theme edits.
-
-## 5. Final launch checklist
-Review both languages, founder titles/qualifications, links, mobile layout and keyboard/dialog behaviour. The supplied CV supports personal experience, not institutional endorsement or academy delivery statistics. No funding, publication, clinical outcome or accreditation guarantees. Validate survey ethics, consent, sampling and data handling before fieldwork. Do not email participant-identifiable data. Confirm nutrition/outbreak advisory boundaries. No legal/privacy compliance certification is provided. Local link checks do not replace browser testing.
-
-## Official documentation
-Firebase: https://firebase.google.com/docs/hosting/quickstart
-Firebase plans: https://firebase.google.com/support/faq
-GitHub limits: https://docs.github.com/pages/getting-started-with-github-pages/github-pages-limits
-Blogger pages: https://support.google.com/blogger/answer/165955
-
-## ملخص عربي
-فك الضغط وافتح public/index.html للمعاينة. GitHub لحفظ الملفات، Firebase Hosting لنشر الموقع، وBlogger للمقالات. أنشئ مشروع Spark، وثبت Node.js وأداة Firebase، ثم نفذ أوامر الدخول واختيار المشروع والنشر أعلاه من مجلد firebase.json. حافظ على public كمجلد النشر ولا توافق على استبدال index.html. أضف رابط المدونة العام في public/config.js ثم أعد النشر. في Blogger أضف رابط الموقع كرابط خارجي في أداة الصفحات. لا حاجة لشراء نطاق للبدء. لا توجد مزامنة تلقائية مع GitHub في هذا الإعداد.
+## العربية
+هذه حزمة الموقع الكاملة مع واتساب مدمج، وليست إضافة منفصلة. فك الضغط وافتح public/index.html. ارفع مجلد public كاملًا إلى GitHub بجانب firebase.json وREADME.md و.gitignore. لا ترفع ملف ZIP وحده ولا تضع كود واتساب في رسالة الحفظ. لا حاجة لإضافة whatsapp-contact.js السابق. الموقع المباشر لم يُعدّل أو يُنشر من هنا.
